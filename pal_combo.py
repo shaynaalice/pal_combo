@@ -35,3 +35,7 @@ for i in iter_list:
      for x in range(voices_num):
          for key, value in i.iteritems():
              print key, value[x]
+
+
+#if we want it as a list:
+[[k, d[k][i]] for d in iter_list for i in range(voices_num) for k in sorted(d)]
