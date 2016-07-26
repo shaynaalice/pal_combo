@@ -29,20 +29,9 @@ for i in range(iter_num):
     iter_list.append(voice_dict)
 
 
-#experimenting with desired output
-for key, value in voice_dict.items():
-    print key, value[0]
-
-pal_iter = list(map(lambda x: x -1, voices))
-
+#output of syllable id and voice id pairs until voice exhaustion and
+#then moves to next iteration
 for i in iter_list:
-    #prints dictionaries within list
-    #print i
-    for key, value in i.iteritems():
-        #prints keys and values in each dictionary (first position in
-        #list)
-        #want position to use pal_iter
-        print key, value[0]
-        
-
-
+     for x in range(voices_num):
+         for key, value in i.iteritems():
+             print key, value[x]
